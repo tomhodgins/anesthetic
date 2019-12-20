@@ -3,6 +3,9 @@
   "version": "0.2.0",
   "description": "Nest CSS rules inside custom properties",
   "main": "index.js",
+  "bin": {
+    "anesthetic": "cli/node.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +18,8 @@
     "selector",
     "rule",
     "property",
-    "nest"
+    "nest",
+    "preprocessor"
   ],
   "author": "Tommy Hodgins",
   "license": "MIT",
