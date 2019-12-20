@@ -1,0 +1,21 @@
+top level rule {
+  --top-level-rule: prop;
+
+  ---\ nested\ rule: {
+    --nested-rule: prop;
+  };
+}
+@media (min-width: 500px) {
+  @supports (custom-props()) {
+    @media (max-height: 500px) {
+      @--custom at-rule {
+        deeply nested rule {
+          --deeply-nested-rule: prop;
+          ---\ nested\ rule: {
+            --nested-rule: prop;
+          };
+        }
+      }
+    }
+  }
+}

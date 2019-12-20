@@ -1,4 +1,4 @@
-import * as parseCSS from 'https://tomhodgins.github.io/parse-css/index.js'
+import * as parseCSS from './lib/parse-css/index.js'
 
 export default function expandNestedStylesheet(string, propertyName = '-') {
   const output = []
