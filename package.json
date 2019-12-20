@@ -1,0 +1,26 @@
+{
+  "name": "anesthetic",
+  "version": "0.0.1",
+  "description": "Nest CSS rules inside custom properties",
+  "main": "index.cjs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomhodgins/anesthetic.git"
+  },
+  "keywords": [
+    "css",
+    "selector",
+    "rule",
+    "property",
+    "nest"
+  ],
+  "author": "Tommy Hodgins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomhodgins/anesthetic/issues"
+  },
+  "homepage": "https://github.com/tomhodgins/anesthetic#readme"
+}
