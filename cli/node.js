@@ -1,5 +1,5 @@
-// node cli/node.js 'a { color: red; ---\ b: { color: green }; }'
-// node cli/node.js path/to/stylesheet.css
+#!/usr/bin/env node
+
 const expandNestedStylesheet = require('../index.cjs.js')
 const fs = require('fs')
 
