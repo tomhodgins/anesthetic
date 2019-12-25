@@ -1,9 +1,0 @@
-@media print {
-  a {
-    color: black;
-    text-decoration: underline;
-    ---\:\:after: {
-      content: ' [link: ' attr(href) ' ]';
-    };
-  }
-}
