@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const expandNestedStylesheet = require('../index.cjs.js')
+const anesthetic = require('../index.cjs.js')
 const fs = require('fs')
 
 let file = process.argv.slice(2)[0]
@@ -11,5 +11,5 @@ if (fs.existsSync(file)) {
 }
 
 console.log(
-  expandNestedStylesheet(css)
+  anesthetic(css)
 )

@@ -1,4 +1,4 @@
-import expandNestedStylesheet from '../index.js'
+import anesthetic from '../index.js'
 
 let file = Deno.args.slice(1)[0]
 let css = file
@@ -11,5 +11,5 @@ try {
 } catch (error) {}
 
 console.log(
-  expandNestedStylesheet(css)
+  anesthetic(css)
 )

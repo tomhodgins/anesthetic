@@ -1,6 +1,6 @@
 import * as parseCSS from './lib/parse-css/index.js'
 
-export default function expandNestedStylesheet(string, propertyName = '-') {
+export default function expandNestedStylesheet(string = '', propertyName = '-') {
   const output = []
 
   const stringify = (list = [], joiner = '') => list
@@ -90,7 +90,7 @@ export default function expandNestedStylesheet(string, propertyName = '-') {
   }
 
   // Process rules in stylesheet
-  parseCSS.parseAStylesheet(string).value.forEach(rule => {
+  parseCSS.parseAStylesheet(String(string)).value.forEach(rule => {
     if (rule.type === 'QUALIFIED-RULE') {
       output.push(...expandNestedRule(rule))
     }
