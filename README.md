@@ -200,7 +200,7 @@ c f {
 }
 ```
 
-To see more demos, check out the tests in [examples/][./examples/]
+To see more demos, check out the tests in [examples/](./examples/)
 
 ## More Info
 
