@@ -1,6 +1,6 @@
 {
   "name": "anesthetic",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Nest CSS rules inside custom properties",
   "main": "index.js",
   "bin": {
