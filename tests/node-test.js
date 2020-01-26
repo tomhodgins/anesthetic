@@ -6,24 +6,51 @@ const tests = [
     'No input should return an empty string'
   ],
   [
-    anesthetic('') === '',
+    anesthetic(``) === '',
     'Empty input should return an empty string'
   ],
   [
-    anesthetic('a { }').replace(/\s+/g, '') === 'a{}'.replace(/\s+/g, ''),
+    anesthetic(`a { }`).replace(/\s+/g, '') === 'a{}'.replace(/\s+/g, ''),
     'Empty rule should return itself (whitespace ignored)'
   ],
   [
-    anesthetic('a { ---b: {}').replace(/\s+/g, '') === 'ab{}'.replace(/\s+/g, ''),
+    anesthetic(`
+      a {
+        ---b: {};
+      }
+    `).replace(/\s+/g, '') === 'ab{}'.replace(/\s+/g, ''),
     'Nested rule in a parent with no properties should return only the expanded rule'
   ],
   [
-    anesthetic('a { color: red; ---b: {}').replace(/\s+/g, '') === 'a{color:red}ab{}'.replace(/\s+/g, ''),
+    anesthetic(`
+      a {
+        color: red;
+        ---b: {};
+      }
+    `).replace(/\s+/g, '') === 'a{color:red}ab{}'.replace(/\s+/g, ''),
     'Nested rule in a parent with properties should return both rules'
   ],
   [
-    anesthetic('a { ---b: { ---c: {} }').replace(/\s+/g, '') === 'abc{}'.replace(/\s+/g, ''),
+    anesthetic(`
+      a {
+        ---b: {
+          ---c: {};
+        };
+      }
+    `).replace(/\s+/g, '') === 'abc{}'.replace(/\s+/g, ''),
     'Rules can be nested inside other rules recursively'
+  ],
+  [
+    anesthetic(`
+      @--custom {
+        a {
+          ---b: {
+            color: red
+          }
+        }
+      }
+    `).replace(/\s+/g, '') === '@--custom { ab { color: red } }'.replace(/\s+/g, ''),
+    'Rules inside at-rules can also be expanded'
   ],
 ]
 
