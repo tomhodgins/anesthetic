@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-
 const fs = require('fs')
 const anesthetic = require('../index.cjs.js')
 
-let file = process.argv.slice(2)[0]
+const file = process.argv.slice(2)[0]
 let css
 
 try {
