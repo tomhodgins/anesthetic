@@ -10,8 +10,6 @@ try {
   css = file
 }
 
-if (css.length) {
-  console.log(
-    anesthetic(css)
-  )
-}
+console.log(
+  anesthetic(css)
+)
