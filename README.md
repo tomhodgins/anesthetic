@@ -176,7 +176,7 @@ a b c {
 }
 ```
 
-## Using selector lists
+### Using selector lists
 
 ```css
 /* nested */
