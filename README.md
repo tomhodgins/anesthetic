@@ -94,7 +94,7 @@ console.log(
 )
 ```
 
-## Using as a CommonJS module with Node
+### Using as a CommonJS module with Node
 
 ```js
 const anesthetic = require('anesthetic/index.cjs.js')
@@ -176,7 +176,7 @@ a b c {
 }
 ```
 
-## Using selector lists
+### Using selector lists
 
 ```css
 /* nested */
